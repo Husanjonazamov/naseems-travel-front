@@ -2,6 +2,8 @@ import SectionHeading from '@/components/Helper/SectionHeading'
 import React from 'react'
 import DestinationSlider from './DestinationSlider'
 
+
+
 const Destination = () => {
   return (
     <div className='pt-20 pb-20'>

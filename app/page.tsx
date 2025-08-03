@@ -8,6 +8,8 @@ import Header from '../components/Home/Header/Header';
 import CategorySelect from './category';
 import Hero from '@/components/Home/Hero/Hero';
 import Destination from '@/components/Home/Destination/Destination';
+import Hotel from '@/components/Home/Hotel/Hotel';
+import WhyChoose from '@/components/Home/WhyChoose/WhyChoose';
 
 
 export default function Home() {
@@ -16,6 +18,8 @@ export default function Home() {
       <Header />
       <Hero />
       <Destination />
+      <Hotel />
+      <WhyChoose />
     </div>
   )
 }
