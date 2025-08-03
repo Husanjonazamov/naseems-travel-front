@@ -16,8 +16,8 @@ const WhyChooseCard = ({ image, title }: Props) => {
       height={70}
       className='mx-auto'
       />
-        <h1>{title}</h1>
-        <p>
+        <h1 className='mt-6 text-center text-gray-900 font-medium text-lg'>{title}</h1>
+        <p className='mt-2 text-center text-xs font-medium text-gray-700'>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, maxime!
         </p>
     </div>
