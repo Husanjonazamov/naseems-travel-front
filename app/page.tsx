@@ -10,6 +10,7 @@ import Hero from '@/components/Home/Hero/Hero';
 import Destination from '@/components/Home/Destination/Destination';
 import Hotel from '@/components/Home/Hotel/Hotel';
 import WhyChoose from '@/components/Home/WhyChoose/WhyChoose';
+import Reviews from '@/components/Home/Reviews/Reviews';
 
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
       <Destination />
       <Hotel />
       <WhyChoose />
+      <Reviews />
     </div>
   )
 }
