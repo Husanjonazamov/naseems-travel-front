@@ -3,8 +3,8 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { Phone, Search, Menu, X, ClipboardList, MapPin } from 'lucide-react';
-import LanguageSwitcher from './LanguageSwitcher';
-import PhoneSection from './PhoneSelect';
+import LanguageSwitcher from '../../LanguageSwitcher';
+import PhoneSection from '../../PhoneSelect';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
