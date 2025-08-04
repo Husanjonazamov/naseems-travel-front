@@ -60,7 +60,7 @@ const PopularTourCard = () => {
             </ul>
 
             <div className="mt-auto pt-4 flex justify-center sm:justify-end">
-              <button className="w-full sm:w-[45%] text-lg bg-blue-900 text-white py-3 rounded-md hover:bg-blue-950 transition">
+              <button className="w-full sm:w-[45%] text-md font-bold bg-blue-900 text-white py-3 rounded-md hover:bg-blue-950 transition">
                 Book now
               </button>
             </div>

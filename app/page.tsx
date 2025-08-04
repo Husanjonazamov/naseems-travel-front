@@ -13,6 +13,7 @@ import WhyChoose from '@/components/Home/WhyChoose/WhyChoose';
 import Reviews from '@/components/Home/Reviews/Reviews';
 import News from '@/components/Home/News/News';
 import PopularTours from '@/components/Home/PopularTours/PopularTours';
+import SoloTouring from '@/components/Home/SoloTouring/SoloTouring';
 
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
       <WhyChoose />
       <Reviews />
       <News />
+      <SoloTouring />
     </div>
   )
 }
