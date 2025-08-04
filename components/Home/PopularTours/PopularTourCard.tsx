@@ -37,7 +37,7 @@ const PopularTourCard = () => {
                 className="brightness-90"
               />
               <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                <h3 className="text-white text-lg font-bold uppercase text-center px-3">
+                <h3 className="text-white bg-black/25 p-8 rounded-md text-lg font-bold uppercase text-center px-3">
                   {data.title}
                 </h3>
               </div>
@@ -45,12 +45,12 @@ const PopularTourCard = () => {
 
             {/* Content */}
             <div className="p-4 flex flex-col justify-between flex-grow">
-              <p className="text-[16px] text-gray-800 mb-4 font-medium leading-relaxed">
+              <p className="text-[17px] text-gray-800 mb-4 font-medium leading-relaxed">
                 {data.content}
               </p>
 
               {/* Skills */}
-              <ul className="text-[15px] text-gray-800 space-y-2 mb-5">
+              <ul className="text-[16px] text-gray-800 space-y-2 mb-5">
                 {data.skils.map((item, i) => (
                   <li key={i} className="flex items-start">
                     <span className="text-blue-700 mr-2 mt-1 text-base">•</span>

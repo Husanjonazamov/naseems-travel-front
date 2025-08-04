@@ -16,9 +16,9 @@ type Props = {
 
 const HotelsCard = ({ hotel }: Props) => {
   return (
-    <div className="rounded-xl border border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden bg-white">
-      {/* Image & Like Icon */}
-      <div className="relative h-[300px] w-full group overflow-hidden">
+    <div className="h-[550px] flex flex-col justify-between rounded-xl border border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden bg-white">
+      {/* Image */}
+      <div className="relative h-[270px] w-full group overflow-hidden">
         <div className="absolute top-4 right-4 z-20 w-8 h-8 bg-white rounded-full text-black flex items-center justify-center">
           <FaHeart className="w-3 h-3" />
         </div>
@@ -33,26 +33,20 @@ const HotelsCard = ({ hotel }: Props) => {
       </div>
 
       {/* Text Content */}
-      <div className="p-4">
-        <h1 className="text-lg font-semibold text-blue-950 hover:text-black cursor-pointer transition-colors duration-200">
-          {hotel.name}
-        </h1>
-        <p className="text-sm text-gray-600 mt-1 font-medium">{hotel.location}</p>
-    
-        <div className="flex items-center space-x-2 mt-3">
-          <div className="px-2 py-1 bg-blue-800 rounded-md font-bold text-white text-xs">{hotel.rating}</div>
-          <p className="text-sm text-gray-800">Exceptional</p>
-          <p className="text-sm font-bold text-gray-800">{hotel.reviews} Reviews</p>
+      <div className="flex flex-col justify-between flex-grow p-4">
+        <div className="space-y-3">
+          <h1 className="text-2xl mb-4 font-semibold text-blue-900 hover:text-black cursor-pointer transition-colors duration-200">
+            {hotel.name}
+          </h1>
+          <p className="text-md text-gray-600 font-medium">{hotel.location}</p>
         </div>
 
-        <p className="mt-3 text-gray-700 font-medium">
-          Starting from <span className="text-blue-600">US${hotel.price}</span>
-        </p>
+        <div className="mt-auto pt-4 flex justify-end">
+          <button className="w-full sm:w-[40%] bg-blue-900 text-white text-lg px-4 py-3 rounded-lg hover:bg-blue-950 transition">
+            Learn More
+          </button>
+        </div>
 
-        {/* Button */}
-        <button className="mt-4 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors duration-200">
-          Book now
-        </button>
       </div>
     </div>
   );
