@@ -11,6 +11,7 @@ import Destination from '@/components/Home/Destination/Destination';
 import Hotel from '@/components/Home/Hotel/Hotel';
 import WhyChoose from '@/components/Home/WhyChoose/WhyChoose';
 import Reviews from '@/components/Home/Reviews/Reviews';
+import News from '@/components/Home/News/News';
 
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
       <Hotel />
       <WhyChoose />
       <Reviews />
+      <News />
     </div>
   )
 }
