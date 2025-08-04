@@ -194,3 +194,55 @@ export const reviewData = [
     image: "/images/u2.jpg",
   },
 ];
+
+
+export const holidaysData = [
+  {
+    title: "Maldives Luxury Escape",
+    image: "/images/l.jpg",
+    content: "Enjoy white sand beaches, turquoise waters, and luxury resorts in the Maldives.",
+    skils: ['Beach', 'Snorkeling', 'Spa', 'Luxury Stay']
+  },
+  {
+    title: "Swiss Alps Adventure",
+    image: "/images/s.jpg",
+    content: "Experience breathtaking mountains, hiking trails, and cozy villages in Switzerland.",
+    skils: ['Hiking', 'Mountains', 'Nature', 'Photography']
+  },
+  {
+    title: "Paris Romantic Getaway",
+    image: "/images/f.jpg",
+    content: "Discover the city of love with art, cuisine, and iconic landmarks like the Eiffel Tower.",
+    skils: ['Culture', 'Cuisine', 'Museums', 'Romance']
+  },
+  {
+    title: "Dubai Desert Safari",
+    image: "/images/b.jpg",
+    content: "Explore the Arabian desert with thrilling dune bashing, camel rides, and luxury camping.",
+    skils: ['Desert', 'Adventure', 'Luxury', 'Camel Rides']
+  },
+  {
+    title: "Bali Island Retreat",
+    image: "/images/l.jpg",
+    content: "Relax in tropical paradise with beaches, temples, and vibrant local culture.",
+    skils: ['Beach', 'Yoga', 'Culture', 'Surfing']
+  },
+  {
+    title: "Tokyo City Explorer",
+    image: "/images/f.jpg",
+    content: "Dive into futuristic city life with high-tech experiences, sushi, and temples.",
+    skils: ['Technology', 'Food', 'Temples', 'Shopping']
+  },
+  {
+    title: "Istanbul Historical Tour",
+    image: "/images/s.jpg",
+    content: "Walk through centuries of history where East meets West in Istanbul.",
+    skils: ['History', 'Architecture', 'Bazaar', 'Culture']
+  },
+  {
+    title: "Santorini Sunset Escape",
+    image: "/images/b.jpg",
+    content: "Experience famous sunsets, whitewashed houses, and Aegean Sea views in Greece.",
+    skils: ['Sunset', 'Romantic', 'Sea View', 'Relaxation']
+  }
+];
