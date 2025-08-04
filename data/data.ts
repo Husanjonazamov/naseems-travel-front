@@ -195,54 +195,53 @@ export const reviewData = [
   },
 ];
 
-
 export const holidaysData = [
   {
     title: "Maldives Luxury Escape",
     image: "/images/l.jpg",
     content: "Enjoy white sand beaches, turquoise waters, and luxury resorts in the Maldives.",
-    skils: ['Beach', 'Snorkeling', 'Spa', 'Luxury Stay']
+    skils: ['Beach and Island', 'Snorkeling and Diving', 'Luxury Stay', 'Ocean View', 'Romantic Experience']
   },
   {
     title: "Swiss Alps Adventure",
     image: "/images/s.jpg",
     content: "Experience breathtaking mountains, hiking trails, and cozy villages in Switzerland.",
-    skils: ['Hiking', 'Mountains', 'Nature', 'Photography']
+    skils: ['Mountain Views',  'Nature Exploration', 'Photography Spots', 'Skiing Adventures', 'Fresh Alpine Air']
   },
   {
     title: "Paris Romantic Getaway",
     image: "/images/f.jpg",
     content: "Discover the city of love with art, cuisine, and iconic landmarks like the Eiffel Tower.",
-    skils: ['Culture', 'Cuisine', 'Museums', 'Romance']
+    skils: ['Art & Culture', 'Museums and Galleries', 'Romantic Walks', 'Historical Landmarks', 'Café Lifestyle']
   },
   {
     title: "Dubai Desert Safari",
     image: "/images/b.jpg",
     content: "Explore the Arabian desert with thrilling dune bashing, camel rides, and luxury camping.",
-    skils: ['Desert', 'Adventure', 'Luxury', 'Camel Rides']
+    skils: ['Desert Safari', 'Adventure Sports', 'Camel Rides', 'Sandboarding Fun', '4x4 Dune Bashing']
   },
   {
     title: "Bali Island Retreat",
     image: "/images/l.jpg",
     content: "Relax in tropical paradise with beaches, temples, and vibrant local culture.",
-    skils: ['Beach', 'Yoga', 'Culture', 'Surfing']
+    skils: ['Beach and Surfing',  'Balinese Culture', 'Spiritual Temples', 'Island Nature', 'Tropical Sunsets']
   },
   {
     title: "Tokyo City Explorer",
     image: "/images/f.jpg",
     content: "Dive into futuristic city life with high-tech experiences, sushi, and temples.",
-    skils: ['Technology', 'Food', 'Temples', 'Shopping']
+    skils: ['Modern Technology', 'Historical Temples', 'Shopping Streets', 'Anime Culture', 'Vibrant Nightlife']
   },
   {
     title: "Istanbul Historical Tour",
     image: "/images/s.jpg",
     content: "Walk through centuries of history where East meets West in Istanbul.",
-    skils: ['History', 'Architecture', 'Bazaar', 'Culture']
+    skils: ['Ancient History', 'Grand Bazaar', 'Cultural Fusion', 'Iconic Mosques', 'Street Food Delights']
   },
   {
     title: "Santorini Sunset Escape",
     image: "/images/b.jpg",
     content: "Experience famous sunsets, whitewashed houses, and Aegean Sea views in Greece.",
-    skils: ['Sunset', 'Romantic', 'Sea View', 'Relaxation']
+    skils: ['Sunset Views', 'Aegean Sea', 'Whitewashed Architecture', 'Relaxation & Leisure', 'Island Cruises']
   }
 ];

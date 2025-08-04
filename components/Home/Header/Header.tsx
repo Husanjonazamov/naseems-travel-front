@@ -16,9 +16,9 @@ export default function Header() {
       <div className="max-w-[1280px] mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-4">
-          <div className="text-4xl font-extrabold text-purple-700">NT</div>
+          <div className="text-4xl font-extrabold text-blue-900">NT</div>
           <div className="leading-tight">
-            <h1 className="text-2xl font-bold text-purple-700">Naseems Travel</h1>
+            <h1 className="text-2xl font-bold text-blue-900">Naseems Travel</h1>
             <p className="text-[13px] text-gray-500 -mt-1">solo adventures together</p>
           </div>
         </Link>
@@ -26,17 +26,17 @@ export default function Header() {
         {/* Desktop Right */}
         <div className="hidden md:flex items-center gap-8">
           <div className="flex items-center gap-2 text-neutral-700 text-[15px]">
-            <MapPin size={20} className="text-purple-600" />
+            <MapPin size={20} className="text-blue-900" />
             <span>Toshkent, Chilonzor Navoiy 56-ko‘cha</span>
           </div>
 
           <div className="flex items-center gap-2 text-neutral-700 text-[15px]">
-            <ClipboardList size={20} className="text-purple-600" />
+            <ClipboardList size={20} className="text-blue-900" />
             <span>Brochure Request</span>
           </div>
 
           <div className="flex items-center gap-2 cursor-pointer text-neutral-700 text-[15px]">
-            <Search size={20} className="text-purple-600" />
+            <Search size={20} className="text-blue-900" />
             <span>Search</span>
           </div>
 
@@ -59,12 +59,12 @@ export default function Header() {
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200 px-4 py-5 space-y-5 text-neutral-800 text-base">
           <div className="flex items-center gap-2">
-            <ClipboardList size={20} className="text-purple-600" />
+            <ClipboardList size={20} className="text-blue-900" />
             <span>Brochure Request</span>
           </div>
 
           <div className="flex items-center gap-2">
-            <Search size={20} className="text-purple-600" />
+            <Search size={20} className="text-blue-900" />
             <input
               type="text"
               placeholder="Search..."
@@ -74,7 +74,7 @@ export default function Header() {
 
           <div className="flex flex-col gap-4 font-semibold text-[16px]">
             {['DESTINATIONS', 'EXPERIENCES', 'SOLO TRAVEL STORIES', 'OFFERS', 'WHY JUST YOU ?', 'COMMUNITY'].map((item, idx) => (
-              <Link key={idx} href="/" className="hover:text-purple-700 transition">{item}</Link>
+              <Link key={idx} href="/" className="hover:text-blue-900 transition">{item}</Link>
             ))}
           </div>
 
@@ -90,7 +90,7 @@ export default function Header() {
             <Link
               key={idx}
               href="/"
-              className="relative hover:text-purple-700 transition after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-purple-700 after:transition-all after:duration-300 hover:after:w-full"
+              className="relative hover:text-blue-900 transition after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-purple-700 after:transition-all after:duration-300 hover:after:w-full"
             >
               {item}
             </Link>

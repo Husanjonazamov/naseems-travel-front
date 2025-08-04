@@ -35,7 +35,7 @@ const HotelsCard = ({ hotel }: Props) => {
       {/* Text Content */}
       <div className="flex flex-col justify-between flex-grow p-4">
         <div className="space-y-3">
-          <h1 className="text-2xl mb-4 font-semibold text-blue-900 hover:text-black cursor-pointer transition-colors duration-200">
+          <h1 className="text-2xl mb-4 font-semibold text-blue-900 hover:text-blue-950 cursor-pointer transition-colors duration-200">
             {hotel.name}
           </h1>
           <p className="text-md text-gray-600 font-medium">{hotel.location}</p>

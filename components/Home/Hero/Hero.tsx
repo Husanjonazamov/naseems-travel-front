@@ -27,7 +27,7 @@ const Hero = () => {
                 <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
                 <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-6 leading-tight">
                     {t.home.heroTitle} <br />
-                    <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-blue-400 to-blue-800 bg-clip-text text-transparent">
                     {t.home.heroSubtitle}
                     </span>
                 </h1>
@@ -52,7 +52,7 @@ const Hero = () => {
                     />
         
                     <CategorySelect />
-                <button className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-md hover:shadow-lg transition-all'>
+                <button className='bg-gradient-to-r from-blue-600 to-blue-900 text-white px-6 py-2 rounded-md hover:shadow-lg transition-all'>
                     Search
                 </button>
                 </div>
