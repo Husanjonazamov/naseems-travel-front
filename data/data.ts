@@ -328,3 +328,19 @@ export const soloTouringData = [
     image: "/images/f.jpg",
   },
 ];
+
+
+export const testimonials = [
+  {
+    text: "It was my first tour with Just You and I most certainly recommend them. From start to finish I felt I was well looked after and the itinerary was excellent.",
+    author: "Anne",
+  },
+  {
+    text: "Everything was very well organised. The guide was fantastic and I made so many new friends.",
+    author: "John",
+  },
+  {
+    text: "A wonderful experience from beginning to end. Highly recommended!",
+    author: "Maria",
+  }
+];

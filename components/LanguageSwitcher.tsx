@@ -25,7 +25,7 @@ export default function LanguageSwitcher({ currentLang, onLanguageChange, isScro
 
   const containerClasses = `
     relative z-50 flex items-center gap-2 rounded-full px-3 py-1 
-    ${isScrolled ? 'bg-white  border border-black/50 text-blue-900' : 'bg-white/10 text-white'} 
+    ${isScrolled ? 'bg-white  border border-black/40 text-blue-900' : 'bg-white/10 text-white'} 
     backdrop-blur-md transition-all duration-300 text-sm
     border border-white/30 ${isScrolled ? 'border-gray-200' : 'sm:border-white/30 border-none'}
   `;

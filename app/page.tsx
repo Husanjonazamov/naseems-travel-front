@@ -14,6 +14,7 @@ import Reviews from '@/components/Home/Reviews/Reviews';
 import News from '@/components/Home/News/News';
 import PopularTours from '@/components/Home/PopularTours/PopularTours';
 import SoloTouring from '@/components/Home/SoloTouring/SoloTouring';
+import TestimonialCarousel from '@/components/Home/TestimonialCarousel/TestimonialCarousel';
 
 
 export default function Home() {
@@ -28,6 +29,7 @@ export default function Home() {
       <Reviews />
       <News />
       <SoloTouring />
+      <TestimonialCarousel />
     </div>
   )
 }
