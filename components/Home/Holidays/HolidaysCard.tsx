@@ -10,7 +10,7 @@ const responsive = {
   mobile: { breakpoint: { max: 768, min: 0 }, items: 1 }
 };
 
-const PopularTourCard = () => {
+const HolidaysToursCard = () => {
   return (
     <div className="my-10 w-[95%] sm:w-[90%] max-w-6xl mx-auto px-2">
       <Carousel
@@ -72,4 +72,4 @@ const PopularTourCard = () => {
   );
 };
 
-export default PopularTourCard;
+export default HolidaysToursCard;

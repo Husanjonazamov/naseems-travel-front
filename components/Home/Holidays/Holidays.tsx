@@ -1,7 +1,7 @@
 import React from 'react';
-import PopularTourCard from './PopularTourCard';
+import HolidaysToursCard from './HolidaysCard';
 
-const PopularTours = () => {
+const HolidaysTours = () => {
   return (
     <div className="relative min-h-[750px] overflow-hidden">
 
@@ -32,11 +32,11 @@ const PopularTours = () => {
         </div>
 
         <div className="mt-10">
-          <PopularTourCard />
+          <HolidaysToursCard />
         </div>
       </div>
     </div>
   );
 };
 
-export default PopularTours;
+export default HolidaysTours;
