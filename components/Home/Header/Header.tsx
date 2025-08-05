@@ -1,68 +1,91 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
-import { Phone, Search, Menu, X, ClipboardList, MapPin } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Phone, Search, Menu, X, ClipboardList } from 'lucide-react';
 import LanguageSwitcher from '../../LanguageSwitcher';
 import PhoneSection from '../../PhoneSelect';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentLang, setCurrentLang] = useState('uz');
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="w-full fixed top-0 z-50 bg-white border-b border-gray-200 shadow-sm text-base">
-      {/* Top Section */}
+    <header
+      className={`w-full fixed top-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-white shadow-md text-blue-900' : 'bg-black/20 backdrop-blur-sm text-white'
+      }`}
+    >
       <div className="max-w-[1280px] mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-4">
-          <div className="text-4xl font-extrabold text-blue-900">NT</div>
+          <div className={`text-4xl font-extrabold ${isScrolled ? 'text-blue-900' : 'text-zinc-300'}`}>NT</div>
           <div className="leading-tight">
-            <h1 className="text-2xl font-bold text-blue-900">Naseems Travel</h1>
-            <p className="text-[13px] text-gray-500 -mt-1">solo adventures together</p>
+            <h1 className={`text-2xl font-bold ${isScrolled ? 'text-blue-900' : 'text-zinc-300'}`}>Naseems Travel</h1>
+            <p className={`text-[13px] -mt-1 ${isScrolled ? 'text-blue-900' : 'text-gray-300'}`}>
+              solo adventures together
+            </p>
           </div>
         </Link>
 
-        {/* Desktop Right */}
+        {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8">
-          <div className="flex items-center gap-2 text-neutral-700 text-[15px]">
-            <MapPin size={20} className="text-blue-900" />
-            <span>Toshkent, Chilonzor Navoiy 56-ko‘cha</span>
+          <nav className="flex items-center gap-6 font-bold text-md">
+            {['Home', 'Tour', 'Blog', 'Contact'].map((item, index) => (
+              <Link
+                key={index}
+                href="/"
+                className={`hover:text-gray-200 transition ${isScrolled ? 'text-blue-900' : 'text-zinc-300'}`}
+              >
+                {item}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Search */}
+          <div className="flex items-center gap-2 cursor-pointer hover:text-zinc-300 transition">
+            <Search size={20} />
+            <span className="text-md font-bold">Search</span>
           </div>
 
-          <div className="flex items-center gap-2 text-neutral-700 text-[15px]">
-            <ClipboardList size={20} className="text-blue-900" />
-            <span>Brochure Request</span>
-          </div>
+          {/* Phone */}
+          <PhoneSection  isScrolled={isScrolled} />
 
-          <div className="flex items-center gap-2 cursor-pointer text-neutral-700 text-[15px]">
-            <Search size={20} className="text-blue-900" />
-            <span>Search</span>
-          </div>
-
-          <PhoneSection />
-
-          <LanguageSwitcher currentLang={currentLang} onLanguageChange={setCurrentLang} />
+          {/* Language */}
+          <LanguageSwitcher currentLang={currentLang} onLanguageChange={setCurrentLang} isScrolled={isScrolled} />
 
         </div>
 
-        {/* Mobile Menu Toggle */}
-        <div className="md:hidden flex items-center gap-3">
-          <LanguageSwitcher currentLang={currentLang} onLanguageChange={setCurrentLang} />
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X size={26} /> : <Menu size={26} />}
-          </button>
-        </div>
+        {/* Mobile toggle */}
+                {/* Mobil versiya uchun LanguageSwitcher va Menu */}
+          <div className="md:hidden flex items-center gap-3">
+            {/* Til tanlash tugmasi */}
+            <LanguageSwitcher
+              currentLang={currentLang}
+              onLanguageChange={setCurrentLang}
+              isScrolled={isScrolled}
+            />
+
+            {/* Menyu tugmasi */}
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200 px-4 py-5 space-y-5 text-neutral-800 text-base">
-          <div className="flex items-center gap-2">
-            <ClipboardList size={20} className="text-blue-900" />
-            <span>Brochure Request</span>
-          </div>
-
           <div className="flex items-center gap-2">
             <Search size={20} className="text-blue-900" />
             <input
@@ -73,30 +96,16 @@ export default function Header() {
           </div>
 
           <div className="flex flex-col gap-4 font-semibold text-[16px]">
-            {['DESTINATIONS', 'EXPERIENCES', 'SOLO TRAVEL STORIES', 'OFFERS', 'WHY JUST YOU ?', 'COMMUNITY'].map((item, idx) => (
-              <Link key={idx} href="/" className="hover:text-blue-900 transition">{item}</Link>
+            {['Home', 'Tour', 'Blog', 'Contact'].map((item, idx) => (
+              <Link key={idx} href="/" className="hover:text-blue-900 transition">
+                {item}
+              </Link>
             ))}
           </div>
 
-          <PhoneSection />
-
+          <PhoneSection isScrolled={isScrolled}/>
         </div>
       )}
-
-      {/* Desktop Navigation */}
-      <nav className="hidden md:block bg-white border-t">
-        <div className="max-w-[1280px] mx-auto px-4 py-4 flex justify-center gap-8 font-semibold text-[16px] text-neutral-800">
-          {['DESTINATIONS', 'EXPERIENCES', 'SOLO TRAVEL STORIES', 'OFFERS', 'WHY JUST YOU ?', 'COMMUNITY'].map((item, idx) => (
-            <Link
-              key={idx}
-              href="/"
-              className="relative hover:text-blue-900 transition after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-purple-700 after:transition-all after:duration-300 hover:after:w-full"
-            >
-              {item}
-            </Link>
-          ))}
-        </div>
-      </nav>
     </header>
   );
 }

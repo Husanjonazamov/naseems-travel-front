@@ -1,59 +1,75 @@
-
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { FaGlobe } from 'react-icons/fa';
 
 interface Language {
   code: string;
   name: string;
-  flag: string;
 }
 
 const languages: Language[] = [
-  { code: 'uz', name: "O'zbek", flag: '🇺🇿' },
-  { code: 'ru', name: 'Русский', flag: '🇷🇺' },
-  { code: 'en', name: 'English', flag: '🇺🇸' }
+  { code: 'en', name: 'EN' },
+  { code: 'ru', name: 'RU' },
+  { code: 'uz', name: 'UZ' }
 ];
 
-interface LanguageSwitcherProps {
+interface Props {
   currentLang: string;
   onLanguageChange: (lang: string) => void;
+  isScrolled?: boolean;
 }
 
-export default function LanguageSwitcher({ currentLang, onLanguageChange }: LanguageSwitcherProps) {
+export default function LanguageSwitcher({ currentLang, onLanguageChange, isScrolled = false }: Props) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const currentLanguage = languages.find(lang => lang.code === currentLang) || languages[0];
+  const containerClasses = `
+    relative z-50 flex items-center gap-2 rounded-full px-3 py-1 
+    ${isScrolled ? 'bg-white  border border-black/50 text-blue-900' : 'bg-white/10 text-white'} 
+    backdrop-blur-md transition-all duration-300 text-sm
+    border border-white/30 ${isScrolled ? 'border-gray-200' : 'sm:border-white/30 border-none'}
+  `;
+
+  const dropdownClasses = `
+    absolute top-full mt-2 sm:left-0 sm:w-full sm:flex-row
+    right-0 flex flex-col sm:flex sm:gap-4 gap-2
+    sm:rounded-full rounded-md sm:px-4 px-3 sm:py-1 py-2 
+    z-50 shadow-lg
+    ${isScrolled ? 'bg-white text-blue-900' : 'sm:bg-white/10 sm:text-white sm:backdrop-blur-md bg-white text-blue-900'}
+    ${isScrolled ? 'sm:border-gray-200 sm:border' : 'sm:border sm:border-white/30'}
+  `;
 
   return (
-    <div className="relative">
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-1 px-2 py-1  bg-white border border-spacing-0 rounded-md cursor-pointer"
-      >
-        <span className="text-base">{currentLanguage.flag}</span>
-        <span className="hidden sm:block font-medium text-xs text-zinc-500">{currentLanguage.code.toUpperCase()}</span>
-        <i className={`ri-arrow-down-s-line text-zinc-500 text-xs transition-transform ${isOpen ? 'rotate-180' : ''}`}></i>
-      </button>
+    <div className="relative inline-block">
+      <div className={containerClasses}>
+        {/* Toggle Button */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="flex items-center gap-1 focus:outline-none"
+        >
+          <FaGlobe className="text-base" />
+          <span className="hidden sm:inline">Language:</span>
+          <span className="font-bold ml-1">{currentLang.toUpperCase()}</span>
+        </button>
+      </div>
 
+      {/* Dropdown */}
       {isOpen && (
-        <div className="absolute top-full right-0 mt-2 bg-white rounded-lg shadow-xl border border-gray-100 py-1 min-w-[120px] z-50">
-          {languages.map((language) => (
+        <div className={dropdownClasses}>
+          {languages.map((lang) => (
             <button
-              key={language.code}
+              key={lang.code}
               onClick={() => {
-                onLanguageChange(language.code);
+                onLanguageChange(lang.code);
                 setIsOpen(false);
               }}
-              className={`w-full flex items-center space-x-2 px-3 py-2 hover:bg-blue-50 transition-colors cursor-pointer ${
-                currentLang === language.code ? 'bg-blue-50 text-blue-600 font-medium' : 'text-gray-700'
+              className={`text-sm transition-colors text-left ${
+                currentLang === lang.code
+                  ? 'font-bold'
+                  : 'opacity-70 hover:opacity-100'
               }`}
             >
-              <span className="text-sm">{language.flag}</span>
-              <span className="text-xs font-medium">{language.name}</span>
-              {currentLang === language.code && (
-                <i className="ri-check-line text-blue-600 ml-auto text-xs"></i>
-              )}
+              {lang.name}
             </button>
           ))}
         </div>

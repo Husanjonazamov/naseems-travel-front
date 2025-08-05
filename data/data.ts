@@ -78,15 +78,7 @@ export const hotelsData = [
     reviews: "3,420",
     price: "95",
   },
-  {
-    id: 4,
-    image: "/images/h4.jpg",
-    name: "Hilton Roma Luxury Hotel Palace",
-    location: "Located in Vaticano Prati, Rome – within walking distance of the Vatican Museums, St. Peter's Basilica, and Castel Sant'Angelo.",
-    rating: 4.5,
-    reviews: "2,876",
-    price: "68",
-  },
+  
 ];
 
 export const toursData = [
