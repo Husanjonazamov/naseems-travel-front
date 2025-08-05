@@ -13,6 +13,11 @@ const SoloTouring = () => {
           <SolorTouringCard key={index} data={data} />
         ))}
       </div>
+      <div className="mt-10 flex justify-center items-center">
+        <button className="bg-blue-900 w-[15%] text-white px-6 py-4 font-bold rounded-xl hover:shadow-lg transition-all hover:bg-blue-950">
+          Explore More
+        </button>
+      </div>
     </div>
   );
 }

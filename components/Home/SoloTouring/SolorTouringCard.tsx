@@ -43,7 +43,7 @@ const SolorTouringCard = ({ data }: Props) => {
             {data.days} days from
           </p>
           <p className="text-2xl font-bold text-gray-900 mb-3">£{data.price}</p>
-          <button className="bg-blue-900 hover:bg-blue-950 text-white py-2 px-6 rounded-lg w-full text-sm font-medium">
+          <button className="bg-blue-900 hover:bg-blue-950 text-white py-3 px-6 rounded-lg w-full text-sm font-bold">
             Explore
           </button>
         </div>

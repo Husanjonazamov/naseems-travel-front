@@ -44,7 +44,7 @@ const Hero = () => {
                             placeholder="qidirish"
                             className='px-4 py-2 w-full mt-2 rounded-md text-black'
                         />
-                        <button className='bg-gradient-to-r from-blue-900 to-blue-950 text-white px-6 py-2 rounded-md font-semibold hover:shadow-lg transition-all'>
+                        <button className='bg-gradient-to-r from-blue-900 to-blue-950 text-white px-6 py-2 rounded-md font-bold hover:shadow-lg transition-all'>
                             Qidirish
                         </button>
                     </div>
@@ -66,7 +66,7 @@ const Hero = () => {
                         className='text-zinc-500 px-4 py-2 rounded-md border w-full sm:w-auto'
                     />
                     <CategorySelect />
-                    <button className='bg-gradient-to-r from-blue-900 to-blue-950 text-white px-6 py-2 rounded-md hover:shadow-lg transition-all'>
+                    <button className='bg-gradient-to-r from-blue-900 to-blue-950 text-white px-6 py-2 font-bold rounded-md hover:shadow-lg transition-all'>
                         Search
                     </button>
                 </div>

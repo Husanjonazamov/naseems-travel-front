@@ -42,7 +42,7 @@ const HotelsCard = ({ hotel }: Props) => {
         </div>
 
         <div className="mt-auto pt-4 flex justify-end">
-          <button className="w-full sm:w-[40%] bg-blue-900 text-white text-lg px-4 py-3 rounded-lg hover:bg-blue-950 transition">
+          <button className="w-full  font-bold sm:w-[40%] bg-blue-900 text-white text-lg px-4 py-3 rounded-lg hover:bg-blue-950 transition">
             Learn More
           </button>
         </div>
