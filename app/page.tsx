@@ -16,6 +16,7 @@ import HolidaysToursCard from '@/components/Home/Holidays/Holidays';
 import SoloTouring from '@/components/Home/SoloTouring/SoloTouring';
 import TestimonialCarousel from '@/components/Home/TestimonialCarousel/TestimonialCarousel';
 import PopularTours from '@/components/Home/Popular/PopularTours';
+import Footer from '@/components/footer';
 
 
 export default function Home() {
@@ -32,6 +33,7 @@ export default function Home() {
       <SoloTouring />
       <TestimonialCarousel />
       <PopularTours />
+      <Footer />
     </div>
   )
 }
