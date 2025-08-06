@@ -15,7 +15,7 @@ import News from '@/components/Home/News/News';
 import HolidaysToursCard from '@/components/Home/Holidays/Holidays';
 import SoloTouring from '@/components/Home/SoloTouring/SoloTouring';
 import TestimonialCarousel from '@/components/Home/TestimonialCarousel/TestimonialCarousel';
-import PopularTours from '@/components/Home/Popular/PopularTours';
+import Blogs from '@/components/Home/Blogs/Blogs';
 import Footer from '@/components/footer';
 
 
@@ -27,12 +27,12 @@ export default function Home() {
       {/* <Destination /> */}
       <Hotel />
       <HolidaysToursCard />
-      <WhyChoose />
+      <WhyChoose /> 
       <Reviews />
       <News />
       <SoloTouring />
       <TestimonialCarousel />
-      <PopularTours />
+      <Blogs />
       <Footer />
     </div>
   )

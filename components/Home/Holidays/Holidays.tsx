@@ -1,4 +1,7 @@
+'use client';
+
 import React from 'react';
+import { motion } from 'framer-motion';
 import HolidaysToursCard from './HolidaysCard';
 
 const HolidaysTours = () => {
@@ -23,17 +26,39 @@ const HolidaysTours = () => {
       {/* Content */}
       <div className="relative z-10 py-14 sm:py-20">
         <div className="w-full px-4 sm:px-0 sm:w-[80%] mx-auto text-center sm:text-left">
-          <h1 className="text-2xl sm:text-4xl text-white font-bold">
-            Popular Tour
-          </h1>
-          <p className="mt-3 text-gray-300 text-sm sm:text-base font-medium">
+          {/* Title Animation */}
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-2xl sm:text-4xl text-white font-bold"
+          >
+            Holdays Tour
+          </motion.h1>
+
+          {/* Paragraph Animation */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="mt-3 text-gray-300 text-sm sm:text-base font-medium"
+          >
             Lorem ipsum dolor sit amet.
-          </p>
+          </motion.p>
         </div>
 
-        <div className="mt-10">
+        {/* Card Section Animation */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="mt-10"
+        >
           <HolidaysToursCard />
-        </div>
+        </motion.div>
       </div>
     </div>
   );
